@@ -19,7 +19,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
   }
 }
 handler.customPrefix = /^> /
-handler.command = /(?:)/i
+handler.command = /(!)/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
