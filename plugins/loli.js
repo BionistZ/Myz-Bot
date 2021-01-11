@@ -1,3 +1,5 @@
+let handler  = async (m, { conn, usedPrefix: _p }) => {
+  conn.reply(m.chat, `
 const axios = require("axios")
 const imageToBase64 = require('image-to-base64');
 
@@ -19,3 +21,18 @@ const loli = () => {
 }
 
 module.exports = loli
+`.trim(), m)
+}
+handler.command = /^(loli)$/i
+handler.owner = false
+handler.mods = false
+handler.premium = false
+handler.group = false
+handler.private = false
+
+handler.admin = false
+handler.botAdmin = false
+
+handler.fail = null
+
+module.exports = handler
